@@ -11,7 +11,7 @@ from rachiopy.flexschedulerule import FlexSchedulerule
 from rachiopy.notification import Notification
 
 _SERVER = 'https://api.rach.io/1/public'
-_HTTP = httplib2.Http()
+_HTTP = httplib2.Http(disable_ssl_certificate_validation=True)
 
 #pylint: disable=too-many-instance-attributes
 class Rachio(object):
